@@ -1,0 +1,60 @@
+---
+title: "Assignment 4"
+author: "Hanna Matera"
+date: "10/4/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+#First of all, I am defining my working directory 
+setwd("~/Desktop/semester 5/CDS/Projects/data")
+getwd()
+
+
+``` 
+
+#Task 1:  Use R to figure out how many elements in the vector below are greater than 2 
+
+```{r}
+#loading rooms vector 
+rooms <- c(1, 2, 1, 3, 1, NA, 3, 1, 3, 2, 1, NA, 1, 8, 3, 1, 4, NA, 1, 3, 1, 2, 1, 7, 1, NA)
+
+#removing missing values
+rooms<-rooms[!is.na(rooms)]
+print(rooms)
+
+#selecting rooms that are bigger than 2 
+big_rooms <- sum(rooms > 2)
+```
+
+### Exercise 2: 
+
+What is the result of running median() function on the above 'rooms' vector? (again, best remove the NAs)
+
+```{r}
+#running median function on rooms 
+median(rooms)
+
+#the median value of 'rooms' is 1.5
+
+```
+## Exercise 3: 
+Inside your R Project (.Rproj), install the 'tidyverse' package and use the download.file() and read_csv() function to read the SAFI_clean.csv dataset into your R project as 'interviews' digital object (see instructions in https://datacarpentry.org/r-socialsci/setup.html and 'Starting with Data' section). Take a screenshot of your RStudio interface showing a) the script you used to create the object, b) the 'interviews' object in the Environment and the c) structure of your R project in the bottom right Files pane. Save the screenshot as an image and put it in your AUID_lastname_firstname repository inside our Github organisation (github.com/Digital-Methods-HASS). Place here the URL leading to the screenshot in your repository.
+
+```{r}
+#loading tidyverse package 
+library(tidyverse)
+
+#downloading data 
+download.file("https://ndownloader.figshare.com/files/11492171",
+              "data/SAFI_clean.csv", mode = "wb")
+
+#loading data and putting it in a adata frame using read.csv
+interview <- read.csv("SAFI_clean.csv",header=TRUE,sep=",")
+
+
+
+knitr::opts_chunk$set(echo = FALSE)
+```
+
