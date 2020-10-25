@@ -1,0 +1,81 @@
+---
+title: "Assignment 6"
+author: "Hanna Matera"
+date: "10/22/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+getwd()
+
+```
+
+## task 1
+
+Define a defensive function that calculates the Gross Domestic Product of a nation from the data available in the gapminder dataset. Using that function, calculate the GDP of Denmark in the following years: 1967, 1977, 1987, 1997, 2007, and 2017.
+
+```{r cars}
+summary(cars)
+#loading packages 
+library(tidyverse)
+library(ggplot2)
+library(gganimate)
+library(gapminder)
+
+
+
+#defensive function calculating GDP in Denmark
+#year and country arguments are created in order to be able to inspect specific years and countries from Gapminder data set 
+
+calcGDP <- function(gapminder, year=NULL, country=NULL) {
+  if(!is.null(year)) {
+    gapminder <- gapminder[gapminder$year %in% year, ]
+  }
+  if (!is.null(country)) {
+    gapminder <- gapminder[gapminder$country %in% country,]
+  }
+  gdp <- gapminder$pop * gapminder$gdpPercap
+
+  new <- cbind(gapminder, gdp=gdp)
+  return(new)
+}
+
+
+#inspecting GDP of Denmark in the following years: 1967, 1977, 1987, 1997, 2007, and 2017.
+head(calcGDP(gapminder, year=c(1967, 1977, 1987, 1997, 2007, 2017),country = "Denmark"))
+# N.B.2017 data not present in the gapminder data set 
+
+
+```
+
+## task 2
+
+Write a script that loops over each country in the gapminder dataset, tests whether the country starts with a ‘B’ , and print out whether the life expectancy is smaller than 50, between 50 and 70, or greater than 70.
+
+```{r}
+
+#finding the countries which name starts with B (unique() displayes all members of a given ctegory, here countries), adding ^B and grep() displays all countries from the gapminder data that start with B 
+
+B_countries <- grep("^B", unique(gapminder$country), value=TRUE)
+B_countries
+
+
+gapminder <- as.data.frame(gapminder) 
+
+
+# I am creating a function that computes average life expectancies across all years for all countries that start with a letter B. Then I am creating a formula that extracts a specific name ofthe coutry and matches it with its average life expectancy. The output is then put in a sentence and printed out. 
+
+for (iCountry in B_countries) {
+  tmp <- mean(gapminder[gapminder$country == iCountry, "lifeExp"])
+  if(tmp >= 70){
+    print(paste("Average Life Expectancy in", iCountry, "is equal to or larger than")) }  
+  else if (tmp>=50) {
+   print(paste("Average Life Expectancy in", iCountry, "is between 50 and 70 years"))}
+  else { print(paste("Average Life Expectancy in", iCountry, "is smaller than 50"))
+  }}
+
+
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
