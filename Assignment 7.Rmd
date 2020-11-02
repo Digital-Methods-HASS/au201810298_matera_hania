@@ -1,0 +1,168 @@
+---
+title: "Assignment 7"
+author: "Hanna Matera"
+date: "11/2/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#packages 
+
+library(tidyverse)
+library(rvest)
+library(dplyr)
+library(tidyr)
+library(stringr)
+library(janitor)
+
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+```{r}
+
+#function for scraping 
+scrape_police_kill <- function(website){
+	url <- read_html(website)
+	annual_table <- url %>% 
+ 			html_nodes("table") %>%
+ 			html_table()  # result is a list
+  annual_table <- do.call(cbind,unlist(annual_table, recursive = FALSE))
+ }
+
+
+
+mastertable=NULL  # we need to create an empty container for results
+
+#function for automatic scraping 
+for (year in 2013:2020){  # here we create a loop to iterate over the years
+	print(year)
+	url <- "https://killedbypolice.net/kbp"   # the annual URLs end with "kbp2017" ,etc.
+	website <- paste0(url,year)  # here we bind the year to the website to form the URL
+	annual_table <- scrape_police_kill(website) # here we apply the function
+	mastertable <- rbind(mastertable, annual_table) # we add the scraped results from the given year to our master dataset
+	}
+
+
+mastertable <- as_tibble(mastertable)
+
+
+
+data <- mastertable %>% 
+	mutate(Age = as.numeric(Age)) %>% 
+	rename(Method = "*") 
+
+#dates are written in different formats, I am unifying that with a bubridate package
+library(lubridate)
+
+data <- data %>% 
+	mutate(Date =
+			case_when(
+				grepl("201[34]",Date) ~ mdy(Date),  
+				# convert dates that contain 2013 or 2014 into mdy format 
+				!grepl("201[34]",Date)~ ymd(Date)))
+				# convert all other dates ymd format
+
+data <- data %>% 
+	mutate(Year = year(Date))
+
+
+
+
+# loading data about population of each state 
+
+#install.packages(c("statebins", "viridis"))
+library(statebins) # using GitHub version
+library(viridis)
+
+# we need to convert state abbreviations to state names for the statebins function
+state_abb <- data_frame(state_name = state.name,
+                        state_abb = state.abb)
+
+# we need to add the state popluations so we can get a proportion of people in each state
+# we got this from https://www2.census.gov/programs-surveys/popest/tables/2010-2016/state/totals/nst-est2016-01.xlsx
+state_populations <- readr::read_csv("data-raw/nst-est2016-01.csv")
+
+# clean it a little
+state_populations <-  
+  state_populations %>% 
+  mutate(state_name = gsub("\\.", "", X__1)) %>%
+  left_join(state_abb)
+
+# compute deaths by state and as deaths per 1000 people in each state
+police_kills_by_state16 <- data %>% 
+  filter(Year == 2016) %>% 
+  group_by(State) %>% 
+  tally() %>% 
+  left_join(state_abb, by = c('State' = 'state_abb')) %>% 
+  filter(!is.na(state_name)) %>% 
+  left_join(state_populations) %>% 
+  mutate(per_n_people = (n / `2016`) * 1000000)
+
+#subsetting 
+police_kills_by_state16 <- police_kills_by_state16 %>% select(3,14:16)
+
+
+
+# loading homicide data 
+
+url <- "https://en.wikipedia.org/wiki/List_of_U.S._states_by_homicide_rate"
+# scrape the website
+url_html <- read_html(url)
+
+# extract the HTML table through the <table> tag >> this creates a list instead of dataframe, but we can unlist a list and coerce it into a dataframe, so vaersgo!
+whole_table <- url_html %>% 
+ html_nodes("table") %>%
+ html_table()  #str(whole_table) turns out to be a list
+
+homicide_rate_wiki <- do.call(cbind.data.frame,whole_table) # much better solution as it does not force every thing to a character, but preserves different datatye
+head(homicide_rate_wiki) # ok, looks good, and it took 3 minutes
+# columns contain rates per 100,000 inhabitants per year
+
+#ordering 
+homicide <- homicide_rate_wiki[,c(1,8,7,6,5,4,3,2)]
+homicide
+
+homicide <- homicide %>% select(1,7)
+names(homicide)[names(homicide) == '2017'] <- 'homicide17'
+
+#renaming 
+names(police_kills_by_state16)[names(police_kills_by_state16) == 'state_name'] <- 'State'
+
+
+#merging 
+merged <- merge(police_kills_by_state16,homicide,by="State")
+	
+#more renamming 	
+names(merged)[names(merged) == '2016'] <- 'population'
+names(merged)[names(merged) == 'per_n_people'] <- 'police_kills_mln'
+	
+#multiplying homicide by 10 (so it can be compared with police kils )
+#computing the ratio between homicide and police kills 
+
+merged <- merged %>% mutate(homicide17=homicide17* 10) %>%  mutate(ratio= police_kills_mln/homicide17)
+
+
+
+
+#visualising 
+library(ggplot2)
+library(ggridges)
+
+ggplot(merged, 
+       aes(state = State, 
+           fill =ratio )) +
+  geom_statebins() +
+  coord_equal() +
+  scale_fill_viridis() +
+  theme_statebins() +
+  labs(title = "The ratio of police killings\nrelative to homicide")  +
+  theme(legend.title=element_blank())
+
+
+# The ratio of the police killings relative to homicide tells us how many people overally died due to homicide compared to how many people died due to police killing. Low ratio indicates low police aggressivness (such as in Nebraska and Hawai) while high ratio indicates high police aggressivness (Delaware, Michigan). 
+	
+```
+```
+
+## 
