@@ -1,0 +1,1318 @@
+X-Antivirus: avast (VPS 21020702)
+X-Antivirus-Status: Clean
+Delivered-To: haniamatera@gmail.com
+Received: by 2002:a05:6400:5b9f:0:0:0:0 with SMTP id s31csp3581165ecx;
+        Sun, 7 Feb 2021 10:19:05 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJy0O6rDWAq0Q+Qb2TDsQ4A4pNYU15bnIllZKxHNcANRiEI5bHheAlYEwbvWfI52O478UjI+
+X-Received: by 2002:a5b:491:: with SMTP id n17mr10103166ybp.484.1612721944778;
+        Sun, 07 Feb 2021 10:19:04 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1612721944; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0QbVimlbHmzfYLf/cxvdLnwoPAu4AtbJPFB6W8JsijfFzt713p0nfRjL/S1uCDJKIW
+         i5u9xoNFxEshP95VxbfTRJy/NuLVa28LiBHHrYBsNq6osasi2s09mLW1KCBahS22poHY
+         hxr5Z3PeSBJH6tvr2YEi6x4cGq+hhd3seFBcsbySb7NwQKVqOwTumS1vQN3GOffbAuEy
+         CVb7JAI7lZj6p3163dgkg9+ul6XsR5UCsRMxIkaAaIE/mnqCg3im4od6/eFES0ogbmaq
+         PMC0XNu+XYY0DmgaJ3YDkESGYq8QeWosDZ6xyiFdGcpMfwXLJSTmFblC/z8q61uU5op7
+         SfdQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:list-id
+         :feedback-id:message-id:date:to:reply-to:from:subject:dkim-signature
+         :dkim-signature;
+        bh=K8kP2HRu9c0b783uk3YrqYXvWpAS7aX9bt5t9YP/F+0=;
+        b=vCL5sfHA9/N2oog+LnkNxNPtmDSpRGlX1wiEwXTL8X2mDvgcYfmO6+iuxhQFGgXFtc
+         aud/Q25CX/dl2hbGWLb0FFG2r/8sYz1KfYzFleXmC1lvIFvl8X3ZctDKJRdH6v4ORf0n
+         ZWvZ7EVwu5IzppDUf3q1yTdqym9M0+3pEqkpWLaRfGFOjpi7WV29VRwYKQBGzTxStZaF
+         2uKxoGXxmzb2W+DLbIl1a8d+bkBr/acoY5T2o1LcoyeOGmaTPe4V+spKr6vgRwGX77nc
+         M4TiGwH0S6dXgeZEgCUKMBDyC6qprwndXQDB6LHsIpSlfIL/n6TEcS+duD19egJQg4TI
+         AeZA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=lLLPBcS2;
+       dkim=pass header.i=@dn.dk header.s=k2 header.b=aW+EWBYR;
+       spf=pass (google.com: domain of bounce-mc.us4_7971729.175242-09ed77078b@mail83.suw13.rsgsv.net designates 198.2.183.83 as permitted sender) smtp.mailfrom=bounce-mc.us4_7971729.175242-09ed77078b@mail83.suw13.rsgsv.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=dn.dk
+Return-Path: <bounce-mc.us4_7971729.175242-09ed77078b@mail83.suw13.rsgsv.net>
+Received: from mail83.suw13.rsgsv.net (mail83.suw13.rsgsv.net. [198.2.183.83])
+        by mx.google.com with ESMTPS id x14si7625396ybm.214.2021.02.07.10.19.04
+        for <haniamatera@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 07 Feb 2021 10:19:04 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-mc.us4_7971729.175242-09ed77078b@mail83.suw13.rsgsv.net designates 198.2.183.83 as permitted sender) client-ip=198.2.183.83;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=lLLPBcS2;
+       dkim=pass header.i=@dn.dk header.s=k2 header.b=aW+EWBYR;
+       spf=pass (google.com: domain of bounce-mc.us4_7971729.175242-09ed77078b@mail83.suw13.rsgsv.net designates 198.2.183.83 as permitted sender) smtp.mailfrom=bounce-mc.us4_7971729.175242-09ed77078b@mail83.suw13.rsgsv.net;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=dn.dk
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.mcsv.net;
+	s=k1; t=1612721776; bh=K8kP2HRu9c0b783uk3YrqYXvWpAS7aX9bt5t9YP/F+0=;
+	h=Subject:From:Reply-To:To:Date:Message-ID:Feedback-ID:List-ID:
+	 List-Unsubscribe:Content-Type:MIME-Version;
+	b=lLLPBcS2mHEsVhjE92Jd7j2lbXUfAqp7kKbFMO6RvZxCtbjR7afbJyCwSqD+94UNC
+	 Bg9NqykfpDe2fq/gZsItOf6kif44ICKdW9godYIKJhdmQq6o5F2GxybM1us5ObPEpD
+	 51PdS6IfSt0WdTzU4zOs4unYorZRVaECl6d+n/0s=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dn.dk; s=k2;
+	t=1612721776; i=noreply@dn.dk;
+	bh=K8kP2HRu9c0b783uk3YrqYXvWpAS7aX9bt5t9YP/F+0=;
+	h=Subject:From:Reply-To:To:Date:Message-ID:List-ID:List-Unsubscribe:
+	 Content-Type:MIME-Version;
+	b=aW+EWBYRx4n65ftyLhHBxaguy7Eg3VDaTw9LIBNGSIJ434Do88lz9tv4AKhaQFa6X
+	 Zfmd9toFeCbhiw5FRmT+EgrlUp1Ub0jHnMLdj9eNimchF1+9mZgVA/2EwSkZ0SUYBh
+	 5jRBw0uoyo684bEK++n4YHVc4eMn8lbpGRHvVq3bQ2kUFOrSfGkV/l0V42fsBzh6x9
+	 SxvkhVOOf2HeL/0VrFeZvztjI+BYo7UtJfN/qLKin6bn+U4hDjCE48XrGzXD7S7DZZ
+	 sRfw9GgfRlmi5+idlvLBR09kRRdmYUtufEHvHiirwzjDGe3g+ixQLkBaumHNY84TmO
+	 SB8Zr9J1kQ87g==
+Received: from localhost (localhost [127.0.0.1])
+	by mail83.suw13.rsgsv.net (Mailchimp) with ESMTP id 4DYcmJ4ynHz35jNlM
+	for <haniamatera@gmail.com>; Sun,  7 Feb 2021 18:16:16 +0000 (GMT)
+Subject: =?utf-8?Q?Sm=C3=A5=20m=C3=A5rdyr=20f=C3=A5r=20nye=20boliger=20efter=20juledonationer=E2=9D=A4?=
+From: =?utf-8?Q?Danmarks=20Naturfredningsforening?= <noreply@dn.dk>
+Reply-To: =?utf-8?Q?Danmarks=20Naturfredningsforening?= <noreply@dn.dk>
+To: <haniamatera@gmail.com>
+Date: Sun,  7 Feb 2021 18:16:12 +0000
+Message-ID: <e4c3e1e452e6294a97df8d6ee.09ed77078b.20210207181602.f19d1a2e8b.789b400c@mail83.suw13.rsgsv.net>
+X-Mailer: MailChimp Mailer - **CIDf19d1a2e8b09ed77078b**
+X-Campaign: mailchimpe4c3e1e452e6294a97df8d6ee.f19d1a2e8b
+X-campaignid: mailchimpe4c3e1e452e6294a97df8d6ee.f19d1a2e8b
+X-Report-Abuse: Please report abuse for this campaign here: https://mailchimp.com/contact/abuse/?u=e4c3e1e452e6294a97df8d6ee&id=f19d1a2e8b&e=09ed77078b
+X-MC-User: e4c3e1e452e6294a97df8d6ee
+Feedback-ID: 7971729:7971729.175242:us4:mc
+List-ID: e4c3e1e452e6294a97df8d6eemc list <e4c3e1e452e6294a97df8d6ee.50121.list-id.mcsv.net>
+X-Accounttype: pd
+List-Unsubscribe: <https://foelg.us4.list-manage.com/unsubscribe?u=e4c3e1e452e6294a97df8d6ee&id=16ebc33b07&e=09ed77078b&c=f19d1a2e8b>, <mailto:unsubscribe-mc.us4_e4c3e1e452e6294a97df8d6ee.f19d1a2e8b-09ed77078b@mailin.mcsv.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_1442695939"
+MIME-Version: 1.0
+
+This is a multi-part message in MIME format
+
+--_----------=_MCPart_1442695939
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+** DN Nyhedsbrev
+------------------------------------------------------------
+
+Gr=C3=B8nne nyheder og guides
+cMtcfQu.png
+https://www.dn.dk/nyheder/forste-slag-om-amager-faelled-er-tabt-politikern=
+e-vil-bygge-pa-kobenhavnernes-helle/?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID
+
+
+** Politikerne vil bygge p=C3=A5 k=C3=B8benhavnernes helle
+------------------------------------------------------------
+
+K=C3=B8benhavns borgerrepr=C3=A6sentation har vedtaget byggeriet af Vejlan=
+ds Kvarter p=C3=A5 L=C3=A6rkesletten p=C3=A5 Amager F=C3=A6lled. Torsdag d=
+en 4. februar stemte et stort flertal nemlig for boligkvarteret med plejeh=
+jem=2C skole=2C daginstitution og butikker.
+
+- En trist beslutning for naturen og for k=C3=B8benhavnerne. Gr=C3=B8nne o=
+mr=C3=A5der er vigtige for vores velv=C3=A6re og sundhed=2C og nu har poli=
+tikerne valgt at tage en bid mere af k=C3=B8benhavnernes sparsomme natur.=
+ Det er ikke kun uansvarligt over for borgerne=2C men ogs=C3=A5 over for d=
+e arter p=C3=A5 L=C3=A6rkesletten=2C der nu skal finde et nyt sted at bo=
+=2C siger pr=C3=A6sident i Danmarks Naturfredningsforening Maria Reumert G=
+jerding.
+
+L=C3=A6s mere om den seneste udvikling i Amager F=C3=A6lled-sagen (https:/=
+/www.dn.dk/nyheder/forste-slag-om-amager-faelled-er-tabt-politikerne-vil-b=
+ygge-pa-kobenhavnernes-helle/?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID)
+https://www.dn.dk/nyheder/sma-mardyr-far-nye-boliger-i-vejen-efter-juledon=
+ationer/?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID
+
+
+** Sm=C3=A5 m=C3=A5rdyr f=C3=A5r nye boliger i Vejen efter juledonationer
+------------------------------------------------------------
+
+I december m=C3=A5ned donerede private danskere i alt 25.000 kroner til st=
+en. Landmand Henrik Bertelsen har nu bygget det stendige=2C der skal give=
+ sm=C3=A5 m=C3=A5rdyr tag over hovedet.
+
+Tak til alle jer=2C der har st=C3=B8ttet indsamlingen til fordel for sm=C3=
+=A5 m=C3=A5rdyr!
+
+L=C3=A6s mere her (https://www.dn.dk/nyheder/sma-mardyr-far-nye-boliger-i-=
+vejen-efter-juledonationer/?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID)
+https://www.affaldsindsamlingen.dk/?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID
+
+
+** Opret en affaldsindsamling og vind et ophold p=C3=A5 Skovsgaard Gods
+------------------------------------------------------------
+
+I weekenden den 17. og 18. april samler vi affald i naturen i hele Danmark=
+=2E Du kan oprette din helt egen indsamling og invitere din familie=2C venne=
+r eller naboer med til en hyggelig g=C3=A5tur i jeres nabolag.
+
+N=C3=A5r du opretter en indsamling er du automatisk med i konkurrencen om=
+ et ophold til en v=C3=A6rdi af 2.500 kroner p=C3=A5 Skovsgaard Gods p=C3=
+=A5 Langeland. Opholdet inkluderer en overnatning og morgenmad i de naturs=
+k=C3=B8nne omgivelser=2C hvor I bl.a. kan hilse p=C3=A5 skotsk h=C3=B8jlan=
+dskv=C3=A6g og mange andre s=C3=B8de dyr.
+
+Opret en Affaldsindsamling nu (https://www.affaldsindsamlingen.dk/opret-en=
+-indsamling/?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID)
+
+N=C3=A5r du opretter en affaldsindsamling sender vi en deltagerpakke med f=
+lotte affaldss=C3=A6kke samt kaffe fra Merrild=2C der sammen med Bilka spo=
+nsorerer Affaldsindsamlingen.
+
+L=C3=A6s mere om Affaldsindsamlingen og konkurrencen og opret en indsamlin=
+g her (https://www.affaldsindsamlingen.dk/?mc_cid=3Df19d1a2e8b&mc_eid=3DUN=
+IQID)
+
+L=C3=A6s  mere om Skovsgaard Gods her (https://www.skovsgaard.dn.dk/?mc_ci=
+d=3Df19d1a2e8b&mc_eid=3DUNIQID)
+Transparent.gif
+http://shop.dn.dk/?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID            https://=
+stoet.dn.dk/?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID           http://www.dn.d=
+k/ture?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID              http://www.dn.dk/o=
+m-os/publikationer/natur-miljo/?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID
+Netbutik (http://shop.dn.dk/?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID) St=C3=B8=
+t DN (https://stoet.dn.dk/?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID) Tag p=C3=
+=A5 tur (http://www.dn.dk/ture?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID) L=C3=
+=A6s bladet (http://www.dn.dk/om-os/publikationer/natur-miljo/?mc_cid=3Df1=
+9d1a2e8b&mc_eid=3DUNIQID)
+
+Danmarks Naturfredningsforening
+Masned=C3=B8gade 20
+2100 K=C3=B8benhavn =C3=98
+Du er tilmeldt et eller flere DN nyhedsbreve med adressen: haniamatera@gmail.com.
+https://www.facebook.com/DanmarksNaturfredningsforening?mc_cid=3Df19d1a2e8=
+b&mc_eid=3DUNIQID https://www.facebook.com/DanmarksNaturfredningsforening?=
+mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID
+
+Find os p=C3=A5 Facebook
+https://twitter.com/DanmarksNatur?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID http=
+s://twitter.com/DanmarksNatur?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID
+
+F=C3=B8lg os p=C3=A5 Twitter
+http://instagram.com/danmarksnatur?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID htt=
+p://instagram.com/danmarksnatur?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID
+
+F=C3=B8lg os p=C3=A5 Instagram
+http://www.dn.dk?mc_cid=3Df19d1a2e8b&mc_eid=3DUNIQID http://www.dn.dk?mc_c=
+id=3Df19d1a2e8b&mc_eid=3DUNIQID
+
+Bes=C3=B8g dn.dk
+
+Vi er den st=C3=B8rste frivillige natur- og milj=C3=B8organisation i Danma=
+rk med flere end 130.000 medlemmer.
+
+Opdater hvilke nyhedsbreve du modtager her (https://foelg.us4.list-manage.=
+com/profile?u=3De4c3e1e452e6294a97df8d6ee&id=3D16ebc33b07&e=3D09ed77078b&c=
+=3Df19d1a2e8b)
+
+Skal du ikke modtage nyhedsbreve fra DN? Tryk her (https://foelg.us4.list-=
+manage.com/unsubscribe?u=3De4c3e1e452e6294a97df8d6ee&id=3D16ebc33b07&e=3D09ed77078b&c=3Df19d1a2e8b) for at afmelde alle.
+Transparent.gif
+--_----------=_MCPart_1442695939
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www=
+=2Ew3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- NAME: 1:2 COLUMN - BANDED -->
+    <!--[if gte mso 15]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG />
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-=
+8">
+    <meta charset=3D"UTF-8">
+    <meta http-equiv=3D"x-ua-compatible" content=3D"IE=3Dedge">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width=2C initial-sca=
+le=3D1">
+    <title>Sm=C3=A5 m=C3=A5rdyr f=C3=A5r nye boliger efter juledonationer=
+=E2=9D=A4</title>
+
+  <style type=3D"text/css">
+=09=09.ReadMsgBody{
+=09=09=09width:100%;
+=09=09}
+=09=09.ExternalClass{
+=09=09=09width:100%;
+=09=09}
+=09=09.ExternalClass=2C.ExternalClass p=2C.ExternalClass span=2C.ExternalC=
+lass font=2C.ExternalClass td=2C.ExternalClass div=2C.ExternalClass img{
+=09=09=09line-height:100%;
+=09=09}
+=09=09table=2Ctd{
+=09=09=09border-collapse:collapse;
+=09=09=09mso-table-lspace:0;
+=09=09=09mso-table-rspace:0;
+=09=09}
+=09=09#outlook a{
+=09=09=09padding:0;
+=09=09}
+=09=09img{
+=09=09=09-ms-interpolation-mode:bicubic;
+=09=09}
+=09=09body=2Ctable=2Ctd=2Cp=2Ca=2Cli=2Cblockquote{
+=09=09=09-moz-text-size-adjust:100%;
+=09=09=09-ms-text-size-adjust:100%;
+=09=09=09-webkit-text-size-adjust:100%;
+=09=09}
+=09=09body{
+=09=09=09font-family:Lato=2CArial;
+=09=09=09font-weight:300;
+=09=09}
+=09=09img{
+=09=09=09padding:0;
+=09=09=09display:block;
+=09=09=09line-height:50%;
+=09=09}
+=09=09td{
+=09=09=09padding:0;
+=09=09}
+=09=09a{
+=09=09=09text-decoration:none;
+=09=09=09color:#ffefff;
+=09=09}
+=09=09.emailBody{
+=09=09=09border:1px solid #ddd;
+=09=09=09border-bottom:none;
+=09=09=09width:600px;
+=09=09}
+=09=09.header{
+=09=09=09height:145px;
+=09=09=09background-color:#004155;
+=09=09=09text-align:center;
+=09=09}
+=09=09.headerImage{
+=09=09=09text-align:center;
+=09=09=09display:inline-block;
+=09=09}
+=09=09.header h1{
+=09=09=09margin-right:25px;
+=09=09=09margin-left:25px;
+=09=09}
+=09=09.header p=2Ch1{
+=09=09=09margin-top:10px;
+=09=09}
+=09=09.arrowBoxUp{
+=09=09=09position:relative;
+=09=09}
+=09=09.arrowBoxUp:after{
+=09=09=09bottom:100%;
+=09=09=09left:25%;
+=09=09=09border:solid transparent;
+=09=09=09content:"";
+=09=09=09height:0;
+=09=09=09width:0;
+=09=09=09position:absolute;
+=09=09=09border-color:rgba(0=2C67=2C88=2C0);
+=09=09=09border-bottom-color:#eff3f5;
+=09=09=09border-width:20px;
+=09=09=09margin-left:-20px;
+=09=09}
+=09=09.arrowBoxRight{
+=09=09=09position:relative;
+=09=09}
+=09=09.arrowBoxRight:after{
+=09=09=09left:100%;
+=09=09=09top:25%;
+=09=09=09border:solid transparent;
+=09=09=09content:"";
+=09=09=09height:0;
+=09=09=09width:0;
+=09=09=09position:absolute;
+=09=09=09border-color:rgba(0=2C67=2C88=2C0);
+=09=09=09border-left-color:#eff3f5;
+=09=09=09border-width:20px;
+=09=09=09margin-top:-20px;
+=09=09}
+=09=09.arrowBoxLeft{
+=09=09=09position:relative;
+=09=09}
+=09=09.arrowBoxLeft:after{
+=09=09=09right:100%;
+=09=09=09top:25%;
+=09=09=09border:solid transparent;
+=09=09=09content:"";
+=09=09=09height:0;
+=09=09=09width:0;
+=09=09=09position:absolute;
+=09=09=09border-color:rgba(0=2C67=2C88=2C0);
+=09=09=09border-right-color:#eff3f5;
+=09=09=09border-width:20px;
+=09=09=09margin-top:-20px;
+=09=09}
+=09=09.defaultText{
+=09=09=09word-break:keep-all;
+=09=09=09padding-left:25px;
+=09=09=09padding-right:25px;
+=09=09=09padding-bottom:0;
+=09=09=09color:#242424;
+=09=09=09font-size:16px;
+=09=09}
+=09=09.defaultTextHeader{
+=09=09=09margin-top:0;
+=09=09}
+=09=09.defaultTextWhite{
+=09=09=09word-break:keep-all;
+=09=09=09padding-left:25px;
+=09=09=09padding-right:25px;
+=09=09=09padding-bottom:0;
+=09=09=09color:#ffefff;
+=09=09=09font-size:16px;
+=09=09}
+=09=09.defaultTextFaded{
+=09=09=09word-break:keep-all;
+=09=09=09padding-left:25px;
+=09=09=09padding-right:25px;
+=09=09=09padding-bottom:0;
+=09=09=09color:#94b0b9;
+=09=09=09font-size:16px;
+=09=09}
+=09=09.tileModule{
+=09=09=09background:transparent;
+=09=09}
+=09=09.tile{
+=09=09=09max-width:600px;
+=09=09}
+=09=09.tileText{
+=09=09=09background:#eff3f5;
+=09=09=09width:580px;
+=09=09}
+=09=09.miniTile{
+=09=09=09max-width:145px;
+=09=09=09max-height:145px;
+=09=09}
+=09=09.quarterTile{
+=09=09=09max-width:290px;
+=09=09=09max-height:290px;
+=09=09}
+=09=09.footer{
+=09=09=09width:100%;
+=09=09=09background-color:#004155;
+=09=09=09border-color:#EDE937;
+=09=09=09border-top-width:5px;
+=09=09=09border-top-style:solid;
+=09=09}
+=09=09.footerInfo{
+=09=09=09font-size:12px;
+=09=09}
+=09=09.unsubButton{
+=09=09=09color:#94b0b9;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09.headerTitle{
+=09=09=09padding:10px;
+=09=09=09word-break:keep-all;
+=09=09=09color:#ffefff;
+=09=09}
+=09=09.headerTitle p{
+=09=09=09font-size:16px;
+=09=09}
+=09=09.mobileSpacer{
+=09=09=09height:0;
+=09=09=09max-width:580px;
+=09=09}
+=09=09.CTA{
+=09=09=09background-color:#4c7a88 !important;
+=09=09=09border:none;
+=09=09}
+=09=09.CTAText{
+=09=09=09text-align:center;
+=09=09}
+=09=09.CTAimg{
+=09=09=09text-align:center;
+=09=09}
+=09=09.CTAimg img{
+=09=09=09display:inline-block;
+=09=09}
+=09=09.socialLink{
+=09=09=09font-size:12px;
+=09=09=09padding-top:25px;
+=09=09=09padding-left:25px;
+=09=09=09padding-right:25px;
+=09=09=09color:#242424;
+=09=09}
+=09=09.socialImg{
+=09=09=09padding-right:5px;
+=09=09=09padding-top:5px;
+=09=09=09color:#242424;
+=09=09}
+=09=09.wideImage{
+=09=09=09width:580px !important;
+=09=09}
+=09=09.preheader{
+=09=09=09font-size:1px;
+=09=09=09color:#ffffff;
+=09=09}
+=09@media (max-width:480px){
+=09=09body=2Ctable=2Ctd=2Cp=2Ca=2Cli=2Cblockquote{
+=09=09=09-webkit-text-size-adjust:none !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09body{
+=09=09=09width:100% !important;
+=09=09=09min-width:100% !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09p{
+=09=09=09margin-right:25px !important;
+=09=09=09margin-left:25px !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09h2{
+=09=09=09margin-right:25px !important;
+=09=09=09margin-left:25px !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.headerTitle h1{
+=09=09=09display:none;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.headerTitle p{
+=09=09=09display:none;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.emailBody{
+=09=09=09width:100% !important;
+=09=09=09max-width:100% !important;
+=09=09=09border:none !important;
+=09=09=09text-align:center !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.emailBody tr=2Ctd{
+=09=09=09display:inline-block;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.CTA td{
+=09=09=09display:table-cell;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.CTA tr{
+=09=09=09display:table-row;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.socialLink{
+=09=09=09padding:0;
+=09=09=09margin-left:25px;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.socialLink img{
+=09=09=09display:inline-block;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.socialLink tr{
+=09=09=09display:table-row;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.socialLink td{
+=09=09=09display:table-cell;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.socialLink p{
+=09=09=09margin-left:0;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.fullWidth{
+=09=09=09width:100%;
+=09=09=09text-align:center;
+=09=09=09margin:0 !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.CTAimg img{
+=09=09=09height:40px;
+=09=09=09width:40px;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.mobileSpacer{
+=09=09=09height:35px !important;
+=09=09=09width:290px;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.defaultText{
+=09=09=09text-align:center;
+=09=09=09padding:0 !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.defaultTextWhite{
+=09=09=09text-align:center;
+=09=09=09padding:0 !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.defaultTextFaded{
+=09=09=09text-align:center;
+=09=09=09padding:0 !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.header{
+=09=09=09text-align:center;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.headerImage{
+=09=09=09margin-bottom:35px !important;
+=09=09=09margin-left:-50px;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.bigImage{
+=09=09=09width:290px;
+=09=09=09max-height:290px;
+=09=09=09max-width:290px !important;
+=09=09=09overflow:hidden !important;
+=09=09=09position:relative;
+=09=09=09text-align:center;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.centerer{
+=09=09=09display:inline-block !important;
+=09=09=09margin-left:-145px !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.arrowBoxUp:after{
+=09=09=09left:50% !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.sideSpacer{
+=09=09=09display:none !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.spacer{
+=09=09=09width:290px !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.tile{
+=09=09=09width:290px;
+=09=09=09max-width:290px;
+=09=09=09min-height:580px;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.tileModule{
+=09=09=09width:290px;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.tileText{
+=09=09=09max-width:290px;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.halfTile{
+=09=09=09width:290px;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.wideImage{
+=09=09=09width:290px !important;
+=09=09=09max-width:290px !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.socialTile{
+=09=09=09display:none;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.quarterTile img{
+=09=09=09height:290px !important;
+=09=09=09max-height:290px !important;
+=09=09=09width:100% !important;
+=09=09=09max-width:290px !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.mediumText{
+=09=09=09height:290px !important;
+=09=09=09max-height:290px !important;
+=09=09=09width:100% !important;
+=09=09=09max-width:290px !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.defaultTextHeader{
+=09=09=09margin-top:25px !important;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.arrowBoxRight{
+=09=09=09position:relative;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.arrowBoxRight:after{
+=09=09=09top:106.8%;
+=09=09=09left:50%;
+=09=09=09border:solid transparent;
+=09=09=09content:"";
+=09=09=09height:0;
+=09=09=09width:0;
+=09=09=09position:absolute !important;
+=09=09=09border-color:rgba(0=2C67=2C88=2C0);
+=09=09=09border-top-color:#eff3f5;
+=09=09=09border-width:20px;
+=09=09=09margin-left:-20px;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.arrowBoxLeft:after{
+=09=09=09top:-6.8% !important;
+=09=09=09left:50%;
+=09=09=09border:solid transparent;
+=09=09=09content:"";
+=09=09=09height:0;
+=09=09=09width:0;
+=09=09=09position:absolute;
+=09=09=09border-color:rgba(0=2C67=2C88=2C0);
+=09=09=09border-bottom-color:#eff3f5;
+=09=09=09border-width:20px;
+=09=09=09margin-left:-20px;
+=09=09}
+
+}=09@media (max-width:480px){
+=09=09.linkImg{
+=09=09=09text-align:center;
+=09=09=09display:inline-block !important;
+=09=09}
+
+}</style><!--[if !mso]><!--><link href=3D"https://fonts.googleapis.com/cs=
+s?family=3DLato:400=2C400i=2C700=2C700i" rel=3D"stylesheet"><!--<![endif]=
+--></head>
+  <body style=3D"-moz-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-w=
+ebkit-text-size-adjust: 100%;font-family: Lato=2C Arial;font-weight: 300;"=
+>
+    <span class=3D"preheader" mc:hideable=3D"hideable_1" style=3D"font-siz=
+e: 1px;color: #ffffff;" mchideable=3D"hideable_1"></span>
+    <link href=3D"https://fonts.googleapis.com/css?family=3DLato" rel=3D"s=
+tylesheet" type=3D"text/css">
+    <!-- template begins -->
+    <center>
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100=
+%" class=3D"bodyTable" style=3D"height: 100%;border-collapse: collapse;mso=
+-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webki=
+t-text-size-adjust: 100%;-moz-text-size-adjust: 100%;">
+        <tr>
+          <td align=3D"center" valign=3D"top" id=3D"bodyCell" style=3D"bor=
+der-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-=
+size-adjust: 100%;">
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"emailBody" style=3D"height: 100%;border-collapse: collapse;mso-table-l=
+space: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-s=
+ize-adjust: 100%;border: 1px solid #ddd;border-bottom: none;width: 600px;-=
+moz-text-size-adjust: 100%;">
+              <tr>
+                <td align=3D"center" valign=3D"top" style=3D"border-collap=
+se: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adj=
+ust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjus=
+t: 100%;">
+                  <table class=3D"header" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" width=3D"100%" style=3D"border-collapse: collapse;mso-tab=
+le-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-te=
+xt-size-adjust: 100%;background-color: #004155;text-align: center;-moz-tex=
+t-size-adjust: 100%;height: 145px;">
+                    <tr>
+                      <td class=3D"headerTitle" width=3D"50%" style=3D"bor=
+der-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-tex=
+t-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 10px;color: #f=
+fefff;-moz-text-size-adjust: 100%;word-break: keep-all;">
+                        <h1 style=3D"margin-top:10px;margin-right:25px;mar=
+gin-left:25px;">DN Nyhedsbrev</h1>
+                        <p style=3D"-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;margin-top: 10px;font-size: 16px;-moz-text-size-adjust=
+: 100%;">Gr&oslash;nne nyheder og guides</p>
+                      </td>
+                      <td width=3D"50%" style=3D"border-collapse: collapse=
+;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-w=
+ebkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;">
+                        <img class=3D"headerImage" src=3D"http://i.imgur.c=
+om/cMtcfQu.png" style=3D"-ms-interpolation-mode: bicubic;padding: 0px;disp=
+lay: inline-block;line-height: 50%;text-align: center;" alt=3D"cMtcfQu.png=
+">
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- // Module Section \\ -->
+                  <!-- // Begin Module: Top Tile \\ -->
+                  <table class=3D"tile tileModule" mc:repeatable=3D"repeat=
+_1" mc:variant=3D"Top Tile" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspa=
+ce: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;backgrou=
+nd: transparent;max-width: 600px;-moz-text-size-adjust: 100%;" mc:repeatin=
+dex=3D"0">
+                    <tr>
+                      <td height=3D"100%" width=3D"9" rowspan=3D"3" class=
+=3D"sideSpacer" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:=
+ 100%;padding: 0px;-moz-text-size-adjust: 100%;"></td>
+                      <td height=3D"35" width=3D"580" class=3D"spacer" sty=
+le=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0p=
+t;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;-=
+moz-text-size-adjust: 100%;"></td>
+                      <td height=3D"100%" width=3D"9" rowspan=3D"3" class=
+=3D"sideSpacer" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:=
+ 100%;padding: 0px;-moz-text-size-adjust: 100%;"></td>
+                    </tr>
+                    <tr>
+                      <td class=3D"bigImage" style=3D"border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%=
+;">
+                        <a href=3D"https://foelg.us4.list-manage.com/track=
+/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D4ec9ba895f&e=3D09ed77078b" targ=
+et=3D"_blank" style=3D"-moz-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;-webkit-text-size-adjust: 100%;text-decoration: none;color: #ffefff;">=
+<img src=3D"https://mcusercontent.com/e4c3e1e452e6294a97df8d6ee/images/b9b=
+4707e-5bb6-4f6f-88b8-dedf64174907.jpg" alt=3D"" border=3D"0" style=3D"marg=
+in: 0; padding: 0;max-width: 580px;max-height: 290px;-ms-interpolation-mod=
+e: bicubic;padding: 0px;display: block;line-height: 50%;" class=3D"centere=
+r"></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class=3D"tileText defaultText arrowBoxUp" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;pos=
+ition: relative;padding-left: 25px;padding-right: 25px;padding-bottom: 0px=
+;color: #242424;font-size: 16px;background: #eff3f5;-moz-text-size-adjust:=
+ 100%;word-break: keep-all;width: 580px;">
+                        <h2 class=3D"defaultTextHeader" style=3D"margin-to=
+p:0px;">Politikerne vil bygge p&aring; k&oslash;benhavnernes helle</h2>
+                        <p style=3D"-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;-moz-text-size-adjust: 100%;">K&oslash;benhavns borger=
+repr&aelig;sentation har vedtaget byggeriet af Vejlands Kvarter p&aring; L=
+&aelig;rkesletten p&aring; Amager F&aelig;lled. Torsdag den 4. februar ste=
+mte et stort flertal nemlig for&nbsp;boligkvarteret med plejehjem=2C skole=
+=2C daginstitution og butikker.<br>
+<br>
+- En trist beslutning for naturen og for k&oslash;benhavnerne. Gr&oslash;n=
+ne omr&aring;der er vigtige for vores velv&aelig;re og sundhed=2C og nu ha=
+r politikerne valgt at tage en bid mere af k&oslash;benhavnernes sparsomme=
+ natur. Det er ikke kun uansvarligt over for borgerne=2C men ogs&aring; ov=
+er for de arter p&aring; L&aelig;rkesletten=2C der nu skal finde et nyt st=
+ed at bo=2C siger pr&aelig;sident i Danmarks Naturfredningsforening Maria=
+ Reumert Gjerding.<br>
+<br>
+<strong><a href=3D"https://foelg.us4.list-manage.com/track/click?u=3De4c3e=
+1e452e6294a97df8d6ee&id=3Df7290f97eb&e=3D09ed77078b" target=3D"_blank" st=
+yle=3D"-moz-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-webkit-text=
+-size-adjust: 100%;text-decoration: none;color: #ffefff;"><span style=3D"c=
+olor:#000000">L&aelig;s mere om den seneste udvikling i Amager F&aelig;lle=
+d-sagen</span></a></strong></p>
+                        </td>
+                      </tr>
+                    </table><table class=3D"tile tileModule" mc:repeatable=
+=3D"repeat_1" mc:variant=3D"Top Tile" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-=
+table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100=
+%;background: transparent;max-width: 600px;-moz-text-size-adjust: 100%;" m=
+c:repeatindex=3D"1">
+                    <tr>
+                      <td height=3D"100%" width=3D"9" rowspan=3D"3" class=
+=3D"sideSpacer" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:=
+ 100%;padding: 0px;-moz-text-size-adjust: 100%;"></td>
+                      <td height=3D"35" width=3D"580" class=3D"spacer" sty=
+le=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0p=
+t;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;-=
+moz-text-size-adjust: 100%;"></td>
+                      <td height=3D"100%" width=3D"9" rowspan=3D"3" class=
+=3D"sideSpacer" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:=
+ 100%;padding: 0px;-moz-text-size-adjust: 100%;"></td>
+                    </tr>
+                    <tr>
+                      <td class=3D"bigImage" style=3D"border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%=
+;">
+                        <a href=3D"https://foelg.us4.list-manage.com/track=
+/click?u=3De4c3e1e452e6294a97df8d6ee&id=3Dd04868e8f1&e=3D09ed77078b" targ=
+et=3D"_blank" style=3D"-moz-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;-webkit-text-size-adjust: 100%;text-decoration: none;color: #ffefff;">=
+<img src=3D"https://mcusercontent.com/e4c3e1e452e6294a97df8d6ee/images/0ad=
+578f6-aee6-4a8c-8681-e18f1995f03d.jpg" alt=3D"" border=3D"0" style=3D"marg=
+in: 0; padding: 0;max-width: 580px;max-height: 290px;-ms-interpolation-mod=
+e: bicubic;padding: 0px;display: block;line-height: 50%;" class=3D"centere=
+r"></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class=3D"tileText defaultText arrowBoxUp" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;pos=
+ition: relative;padding-left: 25px;padding-right: 25px;padding-bottom: 0px=
+;color: #242424;font-size: 16px;background: #eff3f5;-moz-text-size-adjust:=
+ 100%;word-break: keep-all;width: 580px;">
+                        <h2 class=3D"defaultTextHeader" style=3D"margin-to=
+p:0px;">Sm&aring; m&aring;rdyr f&aring;r nye boliger i Vejen efter juledon=
+ationer</h2>
+                        <p style=3D"-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;-moz-text-size-adjust: 100%;">I december m&aring;ned d=
+onerede private danskere i alt 25.000 kroner til sten. Landmand Henrik Ber=
+telsen har nu bygget det stendige=2C der skal give sm&aring; m&aring;rdyr=
+ tag over hovedet.<br>
+<br>
+Tak til alle jer=2C der har st&oslash;ttet indsamlingen til fordel for sm&=
+aring; m&aring;rdyr!&nbsp;<br>
+<br>
+<strong><a href=3D"https://foelg.us4.list-manage.com/track/click?u=3De4c3e=
+1e452e6294a97df8d6ee&id=3Dc66cda4840&e=3D09ed77078b" target=3D"_blank" st=
+yle=3D"-moz-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-webkit-text=
+-size-adjust: 100%;text-decoration: none;color: #ffefff;"><span style=3D"c=
+olor:#000000">L&aelig;s mere her</span></a></strong></p>
+                        </td>
+                      </tr>
+                    </table><table class=3D"tile tileModule" mc:repeatable=
+=3D"repeat_1" mc:variant=3D"Top Tile" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-=
+table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100=
+%;background: transparent;max-width: 600px;-moz-text-size-adjust: 100%;" m=
+c:repeatindex=3D"2">
+                    <tr>
+                      <td height=3D"100%" width=3D"9" rowspan=3D"3" class=
+=3D"sideSpacer" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:=
+ 100%;padding: 0px;-moz-text-size-adjust: 100%;"></td>
+                      <td height=3D"35" width=3D"580" class=3D"spacer" sty=
+le=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0p=
+t;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;-=
+moz-text-size-adjust: 100%;"></td>
+                      <td height=3D"100%" width=3D"9" rowspan=3D"3" class=
+=3D"sideSpacer" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;m=
+so-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust:=
+ 100%;padding: 0px;-moz-text-size-adjust: 100%;"></td>
+                    </tr>
+                    <tr>
+                      <td class=3D"bigImage" style=3D"border-collapse: col=
+lapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 10=
+0%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%=
+;">
+                        <a href=3D"https://foelg.us4.list-manage.com/track=
+/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D5c8a9c2419&e=3D09ed77078b" targ=
+et=3D"_blank" style=3D"-moz-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;-webkit-text-size-adjust: 100%;text-decoration: none;color: #ffefff;">=
+<img src=3D"https://mcusercontent.com/e4c3e1e452e6294a97df8d6ee/images/a57=
+e8180-2dd5-4b8b-9b49-26646f817e5b.jpg" alt=3D"" border=3D"0" style=3D"marg=
+in: 0; padding: 0;max-width: 580px;max-height: 290px;-ms-interpolation-mod=
+e: bicubic;padding: 0px;display: block;line-height: 50%;" class=3D"centere=
+r"></a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class=3D"tileText defaultText arrowBoxUp" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;pos=
+ition: relative;padding-left: 25px;padding-right: 25px;padding-bottom: 0px=
+;color: #242424;font-size: 16px;background: #eff3f5;-moz-text-size-adjust:=
+ 100%;word-break: keep-all;width: 580px;">
+                        <h2 class=3D"defaultTextHeader" style=3D"margin-to=
+p:0px;">Opret en affaldsindsamling og vind et ophold p&aring; Skovsgaard G=
+ods</h2>
+                        <p style=3D"-ms-text-size-adjust: 100%;-webkit-tex=
+t-size-adjust: 100%;-moz-text-size-adjust: 100%;">I weekenden den 17. og 1=
+8. april samler vi affald i naturen i hele Danmark. Du kan oprette din hel=
+t egen indsamling og invitere din familie=2C venner eller naboer med til e=
+n hyggelig g&aring;tur i jeres nabolag.<br>
+<br>
+N&aring;r du opretter en indsamling er du automatisk med i konkurrencen om=
+ et ophold til en v&aelig;rdi af 2.500 kroner p&aring; Skovsgaard Gods p&a=
+ring; Langeland. Opholdet inkluderer en overnatning og morgenmad i de natu=
+rsk&oslash;nne omgivelser=2C hvor I bl.a. kan hilse p&aring; skotsk h&osla=
+sh;jlandskv&aelig;g og mange andre s&oslash;de dyr.<br>
+<br>
+<strong><a href=3D"https://foelg.us4.list-manage.com/track/click?u=3De4c3e=
+1e452e6294a97df8d6ee&id=3D8b76b1c280&e=3D09ed77078b" target=3D"_blank" st=
+yle=3D"-moz-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-webkit-text=
+-size-adjust: 100%;text-decoration: none;color: #ffefff;"><span style=3D"c=
+olor:#000000">Opret en Affaldsindsamling nu</span></a></strong><br>
+<br>
+N&aring;r du opretter en affaldsindsamling sender vi en deltagerpakke med=
+ flotte affaldss&aelig;kke samt kaffe fra Merrild=2C der sammen med Bilka=
+ sponsorerer Affaldsindsamlingen.<br>
+<br>
+<strong><a href=3D"https://foelg.us4.list-manage.com/track/click?u=3De4c3e=
+1e452e6294a97df8d6ee&id=3Db0dd5ad81a&e=3D09ed77078b" target=3D"_blank" st=
+yle=3D"-moz-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-webkit-text=
+-size-adjust: 100%;text-decoration: none;color: #ffefff;"><span style=3D"c=
+olor:#000000">L&aelig;s mere om Affaldsindsamlingen og konkurrencen og opr=
+et en indsamling her</span></a><br>
+<br>
+<a href=3D"https://foelg.us4.list-manage.com/track/click?u=3De4c3e1e452e62=
+94a97df8d6ee&id=3D2159ab2e1a&e=3D09ed77078b" target=3D"_blank" style=3D"-=
+moz-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;text-decoration: none;color: #ffefff;"><span style=3D"color:#00=
+0000">L&aelig;s&nbsp; mere om Skovsgaard Gods her</span></a></strong></p>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- // End Module: Top Tile -->
+                    <!-- // Begin Module: Tile -->
+
+                    <!-- // End Module: Tile -->
+                    <!-- // Begin Module: One Tile Horizontal Right-->
+
+                    <!-- // End Module: One Tile Horizontal Right-->
+                    <!-- // Begin Module: One Tile Horizontal Left -->
+
+                    <!-- // Begin Module: Social Tile -->
+
+                    <!-- // End Module: Social Tile-->
+                    <!-- // Begin Module: Image Tile-->
+
+                    <!-- // End Module: Image Tile \\-->
+                    <!-- // Begin module: Text Tile \\ -->
+
+                      <!-- // End Module: Text Tile \\ -->
+                      <!-- // Module Section End \\ -->
+                      <table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rsp=
+ace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;-moz-te=
+xt-size-adjust: 100%;">
+                        <!-- // spacer table \\ -->
+                        <tr>
+                          <td height=3D"35" width=3D"100%" style=3D"border=
+-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-s=
+ize-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-siz=
+e-adjust: 100%;"><img src=3D"https://upload.wikimedia.org/wikipedia/common=
+s/c/ce/Transparent.gif" style=3D"-ms-interpolation-mode: bicubic;padding:=
+ 0px;display: block;line-height: 50%;" alt=3D"Transparent.gif">
+                          </td>
+                        </tr>
+                      </table>
+                      <!-- // spacer table end \\ -->
+                      <table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"CTA footer" style=3D"border-collapse: collapse;mso-table-lspa=
+ce: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size=
+-adjust: 100%;width: 100%;background-color: #4c7a88 !important;border-colo=
+r: #EDE937;border-top-width: 5px;border-top-style: solid;border: none;-moz=
+-text-size-adjust: 100%;">
+                        <tr>
+                          <td colspan=3D"4" height=3D"15" style=3D"border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size=
+-adjust: 100%;"></td>
+                        </tr>
+                        <tr class=3D"CTAimg" style=3D"text-align:center;">
+                          <td width=3D"25%" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;=
+">
+                            <a href=3D"https://foelg.us4.list-manage.com/t=
+rack/click?u=3De4c3e1e452e6294a97df8d6ee&id=3Da60d63bec6&e=3D09ed77078b"=
+ style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-d=
+ecoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"><img src=3D"h=
+ttp://i.imgur.com/TqMw5pA.png" style=3D"-ms-interpolation-mode: bicubic;pa=
+dding: 0px;display: inline-block;line-height: 50%;" alt=3D"TqMw5pA.png"></=
+a>
+                          </td>
+                          <td width=3D"25%" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;=
+">
+                            <a href=3D"https://foelg.us4.list-manage.com/t=
+rack/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D625c1acb84&e=3D09ed77078b"=
+ style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-d=
+ecoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"><img src=3D"h=
+ttp://i.imgur.com/qj5FzYl.png" style=3D"-ms-interpolation-mode: bicubic;pa=
+dding: 0px;display: inline-block;line-height: 50%;" alt=3D"qj5FzYl.png"></=
+a>
+                          </td>
+                          <td width=3D"25%" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;=
+">
+                            <a href=3D"https://foelg.us4.list-manage.com/t=
+rack/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D0fdcef166f&e=3D09ed77078b"=
+ style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-d=
+ecoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"><img src=3D"h=
+ttp://i.imgur.com/C9EG6Ra.png" style=3D"-ms-interpolation-mode: bicubic;pa=
+dding: 0px;display: inline-block;line-height: 50%;" alt=3D"C9EG6Ra.png"></=
+a>
+                          </td>
+                          <td width=3D"25%" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;=
+">
+                            <a href=3D"https://foelg.us4.list-manage.com/t=
+rack/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D00787791f5&e=3D09ed77078b"=
+ style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-d=
+ecoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"><img src=3D"h=
+ttp://i.imgur.com/mKnasyp.png" style=3D"-ms-interpolation-mode: bicubic;pa=
+dding: 0px;display: inline-block;line-height: 50%;" alt=3D"mKnasyp.png"></=
+a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan=3D"4" height=3D"10" style=3D"border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size=
+-adjust: 100%;"></td>
+                        </tr>
+                        <tr class=3D"CTAText" style=3D"text-align:center;"=
+>
+                          <td width=3D"25%" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;=
+">
+                            <a href=3D"https://foelg.us4.list-manage.com/t=
+rack/click?u=3De4c3e1e452e6294a97df8d6ee&id=3Dde7f5888b3&e=3D09ed77078b"=
+ style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-d=
+ecoration: none;color: #ffefff;-moz-text-size-adjust: 100%;">Netbutik</a>
+                          </td>
+                          <td width=3D"25%" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;=
+">
+                            <a href=3D"https://foelg.us4.list-manage.com/t=
+rack/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D06a8c43965&e=3D09ed77078b"=
+ style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-d=
+ecoration: none;color: #ffefff;-moz-text-size-adjust: 100%;">St=C3=B8t DN<=
+/a>
+                          </td>
+                          <td width=3D"25%" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;=
+">
+                            <a href=3D"https://foelg.us4.list-manage.com/t=
+rack/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D11699cd949&e=3D09ed77078b"=
+ style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-d=
+ecoration: none;color: #ffefff;-moz-text-size-adjust: 100%;">Tag p=C3=A5 t=
+ur</a>
+                          </td>
+                          <td width=3D"25%" style=3D"border-collapse: coll=
+apse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100=
+%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;=
+">
+                            <a href=3D"https://foelg.us4.list-manage.com/t=
+rack/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D0f0f098622&e=3D09ed77078b"=
+ style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;text-d=
+ecoration: none;color: #ffefff;-moz-text-size-adjust: 100%;">L=C3=A6s blad=
+et</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan=3D"4" height=3D"15" style=3D"border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;-moz-text-size=
+-adjust: 100%;"></td>
+                        </tr>
+                      </table>
+                      <table class=3D"footer" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" style=3D"border-collapse: collapse;mso-table-lspace:=
+ 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-ad=
+just: 100%;width: 100%;background-color: #004155;border-color: #EDE937;bor=
+der-top-width: 5px;border-top-style: solid;-moz-text-size-adjust: 100%;">
+                        <tr>
+                          <td class=3D"defaultTextFaded footerInfo" style=
+=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;=
+-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;pad=
+ding-left: 25px;padding-right: 25px;padding-bottom: 0px;color: #94b0b9;fon=
+t-size: 12px;-moz-text-size-adjust: 100%;word-break: keep-all;">
+                            <p style=3D"-ms-text-size-adjust: 100%;-webkit=
+-text-size-adjust: 100%;-moz-text-size-adjust: 100%;">Danmarks Naturfredni=
+ngsforening<br>
+                              Masned=C3=B8gade 20<br>
+                              2100 K=C3=B8benhavn =C3=98</p>
+                              <p style=3D"-ms-text-size-adjust: 100%;-webk=
+it-text-size-adjust: 100%;-moz-text-size-adjust: 100%;">
+Du er tilmeldt et eller flere DN nyhedsbreve med adressen: haniamatera@gmail.com.</p>
+                            </td>
+                            <td class=3D"socialLink" style=3D"border-colla=
+pse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-ad=
+just: 100%;-webkit-text-size-adjust: 100%;padding: 0px;font-size: 12px;pad=
+ding-top: 25px;padding-left: 25px;padding-right: 25px;color: #242424;-moz-=
+text-size-adjust: 100%;">
+                              <table style=3D"border-collapse: collapse;ms=
+o-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webk=
+it-text-size-adjust: 100%;-moz-text-size-adjust: 100%;">
+                                <tr class=3D"defaultTextWhite" style=3D"pa=
+dding-left: 25px;padding-right: 25px;padding-bottom: 0px;color: #ffefff;fo=
+nt-size: 16px;word-break: keep-all;">
+                                  <td class=3D"socialImg" style=3D"border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;padding-right:=
+ 5px;padding-top: 5px;color: #242424;-moz-text-size-adjust: 100%;">
+                                    <a href=3D"https://foelg.us4.list-mana=
+ge.com/track/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D423fcd62c9&e=3D09ed77078b" style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%=
+;text-decoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"><img s=
+rc=3D"http://i.imgur.com/8qDOGRI.png" style=3D"-ms-interpolation-mode: bic=
+ubic;padding: 0px;display: block;line-height: 50%;" alt=3D"8qDOGRI.png"></=
+a>
+                                  </td>
+                                  <td style=3D"border-collapse: collapse;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;">
+                                    <a href=3D"https://foelg.us4.list-mana=
+ge.com/track/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D6bad1118e1&e=3D09ed77078b" style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%=
+;text-decoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"></a>
+                                    <p style=3D"-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;-moz-text-size-adjust: 100%;">Find os p=C3=
+=A5 Facebook</p>
+                                  </td>
+                                </tr>
+                                <tr class=3D"defaultTextWhite" style=3D"pa=
+dding-left: 25px;padding-right: 25px;padding-bottom: 0px;color: #ffefff;fo=
+nt-size: 16px;word-break: keep-all;">
+                                  <td class=3D"socialImg" style=3D"border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;padding-right:=
+ 5px;padding-top: 5px;color: #242424;-moz-text-size-adjust: 100%;">
+                                    <a href=3D"https://foelg.us4.list-mana=
+ge.com/track/click?u=3De4c3e1e452e6294a97df8d6ee&id=3Dec4b8f7356&e=3D09ed77078b" style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%=
+;text-decoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"><img s=
+rc=3D"http://i.imgur.com/wrAtwG1.png" style=3D"-ms-interpolation-mode: bic=
+ubic;padding: 0px;display: block;line-height: 50%;" alt=3D"wrAtwG1.png"></=
+a>
+                                  </td>
+                                  <td style=3D"border-collapse: collapse;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;">
+                                    <a href=3D"https://foelg.us4.list-mana=
+ge.com/track/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D5da2b74bce&e=3D09ed77078b" style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%=
+;text-decoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"></a>
+                                    <p style=3D"-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;-moz-text-size-adjust: 100%;">F=C3=B8lg os=
+ p=C3=A5 Twitter</p>
+                                  </td>
+                                </tr>
+                                <tr class=3D"defaultTextWhite" style=3D"pa=
+dding-left: 25px;padding-right: 25px;padding-bottom: 0px;color: #ffefff;fo=
+nt-size: 16px;word-break: keep-all;">
+                                  <td class=3D"socialImg" style=3D"border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;padding-right:=
+ 5px;padding-top: 5px;color: #242424;-moz-text-size-adjust: 100%;">
+                                    <a href=3D"https://foelg.us4.list-mana=
+ge.com/track/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D53fc595a6e&e=3D09ed77078b" style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%=
+;text-decoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"><img s=
+rc=3D"http://i.imgur.com/z7tscPo.png" style=3D"-ms-interpolation-mode: bic=
+ubic;padding: 0px;display: block;line-height: 50%;" alt=3D"z7tscPo.png"></=
+a>
+                                  </td>
+                                  <td style=3D"border-collapse: collapse;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;">
+                                    <a href=3D"https://foelg.us4.list-mana=
+ge.com/track/click?u=3De4c3e1e452e6294a97df8d6ee&id=3Dcca0cac2f3&e=3D09ed77078b" style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%=
+;text-decoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"></a>
+                                    <p style=3D"-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;-moz-text-size-adjust: 100%;">F=C3=B8lg os=
+ p=C3=A5 Instagram</p>
+                                  </td>
+                                </tr>
+                                <tr class=3D"defaultTextWhite" style=3D"pa=
+dding-left: 25px;padding-right: 25px;padding-bottom: 0px;color: #ffefff;fo=
+nt-size: 16px;word-break: keep-all;">
+                                  <td class=3D"socialImg" style=3D"border-=
+collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-si=
+ze-adjust: 100%;-webkit-text-size-adjust: 100%;padding: 0px;padding-right:=
+ 5px;padding-top: 5px;color: #242424;-moz-text-size-adjust: 100%;">
+                                    <a href=3D"https://foelg.us4.list-mana=
+ge.com/track/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D21beb6af56&e=3D09ed77078b" style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%=
+;text-decoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"><img s=
+rc=3D"http://i.imgur.com/3kBZDFJ.png" style=3D"-ms-interpolation-mode: bic=
+ubic;padding: 0px;display: block;line-height: 50%;" alt=3D"3kBZDFJ.png"></=
+a>
+                                  </td>
+                                  <td style=3D"border-collapse: collapse;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;padding: 0px;-moz-text-size-adjust: 100%;">
+                                    <a href=3D"https://foelg.us4.list-mana=
+ge.com/track/click?u=3De4c3e1e452e6294a97df8d6ee&id=3D2c7aced7b9&e=3D09ed77078b" style=3D"-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%=
+;text-decoration: none;color: #ffefff;-moz-text-size-adjust: 100%;"></a>
+                                    <p style=3D"-ms-text-size-adjust: 100%=
+;-webkit-text-size-adjust: 100%;-moz-text-size-adjust: 100%;">Bes=C3=B8g d=
+n.dk</p>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width=3D"50%" class=3D"defaultTextFaded fo=
+oterInfo fullWidth" style=3D"border-collapse: collapse;mso-table-lspace: 0=
+pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adju=
+st: 100%;padding: 0px;padding-left: 25px;padding-right: 25px;padding-botto=
+m: 0px;color: #94b0b9;font-size: 12px;-moz-text-size-adjust: 100%;word-bre=
+ak: keep-all;">
+                              <p style=3D"-ms-text-size-adjust: 100%;-webk=
+it-text-size-adjust: 100%;-moz-text-size-adjust: 100%;">Vi er den st=C3=B8=
+rste frivillige natur- og milj=C3=B8organisation i Danmark med flere end 1=
+30.000 medlemmer.</p>
+                            </td>
+                            <td width=3D"50%" class=3D"defaultTextFaded fo=
+oterInfo fullWidth" style=3D"border-collapse: collapse;mso-table-lspace: 0=
+pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adju=
+st: 100%;padding: 0px;padding-left: 25px;padding-right: 25px;padding-botto=
+m: 0px;color: #94b0b9;font-size: 12px;-moz-text-size-adjust: 100%;word-bre=
+ak: keep-all;">
+                              <p style=3D"-ms-text-size-adjust: 100%;-webk=
+it-text-size-adjust: 100%;-moz-text-size-adjust: 100%;"> Opdater hvilke ny=
+hedsbreve du modtager <a href=3D"https://foelg.us4.list-manage.com/profile=
+?u=3De4c3e1e452e6294a97df8d6ee&id=3D16ebc33b07&e=3D09ed77078b&c=3Df19d1a2e8b=
+" class=3D"unsubButton" style=3D"-ms-text-size-adjust: 100%;-webkit-text-s=
+ize-adjust: 100%;text-decoration: none;color: #94b0b9;-moz-text-size-adjus=
+t: 100%;">
+                                <u>her</u></a>
+                              </p>
+                              <p style=3D"-ms-text-size-adjust: 100%;-webk=
+it-text-size-adjust: 100%;-moz-text-size-adjust: 100%;">Skal du ikke modta=
+ge nyhedsbreve fra DN? Tryk <a href=3D"https://foelg.us4.list-manage.com/u=
+nsubscribe?u=3De4c3e1e452e6294a97df8d6ee&id=3D16ebc33b07&e=3D09ed77078b&c=3D=
+f19d1a2e8b" class=3D"unsubButton" style=3D"-ms-text-size-adjust: 100%;-web=
+kit-text-size-adjust: 100%;text-decoration: none;color: #94b0b9;-moz-text-=
+size-adjust: 100%;">
+                                <u>her</u></a> for at afmelde alle.</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td height=3D"35" width=3D"100%" colspan=3D"=
+2" style=3D"border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspa=
+ce: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;padding:=
+ 0px;-moz-text-size-adjust: 100%;"><img src=3D"https://upload.wikimedia.or=
+g/wikipedia/commons/c/ce/Transparent.gif" style=3D"-ms-interpolation-mode:=
+ bicubic;padding: 0px;display: block;line-height: 50%;" alt=3D"Transparent=
+=2Egif">
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </center>
+          <img src=3D"https://foelg.us4.list-manage.com/track/open.php?u=
+=3De4c3e1e452e6294a97df8d6ee&id=3Df19d1a2e8b&e=3D09ed77078b" height=3D"1"=
+ width=3D"1"></body>
+</html>
+--_----------=_MCPart_1442695939--
